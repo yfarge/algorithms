@@ -11,6 +11,8 @@ class Solution(object):
         res = ""
         temp = num
         for i in reversed(range(13)):
+            if temp == 0:
+                break
             base, roman = bases[i], romans[i]
             count = temp // base
             res += count * roman
