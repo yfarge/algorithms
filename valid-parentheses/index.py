@@ -1,5 +1,9 @@
 class Solution(object):
     def isValid(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
         if s == "":
             return True
         stack = []
@@ -13,7 +17,3 @@ class Solution(object):
                 return False
 
         return len(stack) == 0
-        """
-        :type s: str
-        :rtype: bool
-        """
