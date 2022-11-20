@@ -8,18 +8,14 @@ class Solution:
         :rtype: List[List[int]]
         """
 
-        result = []
-        intervals.sort()
-        last_interval = [-1, -1]
-        for i in range(len(intervals)):
-            if self.isOverlap(intervals[i], last_interval):
-                last_interval = [min(intervals[i][0], last_interval[0]),
-                                 max(intervals[i][1], last_interval[1])]
-            else:
-                result.append(last_interval[:])
-                last_interval = intervals[i]
-        result.append(last_interval)
-        return result[1:]
+        intervals.sort(key=lambda i: i[0])
+        result = [intervals[0]]
 
-    def isOverlap(self, a: List[int], b: List[int]):
-        return a[0] <= b[1] and a[1] >= b[0]
+        for start, end in intervals:
+            lastEnd = result[-1][1]
+            if start <= lastEnd:
+                result[-1][1] = max(lastEnd, end)
+            else:
+                result.append([start, end])
+
+        return result
