@@ -1,18 +1,18 @@
 from typing import *
 
 
-class Solution:
-    def sortColors(self, nums: List[int]) -> None:
-        """
-        Do not return anything, modify nums in-place instead.
-        """
-        n = len(nums)
-        swapped = False
-        for i in range(n):
-            for j in range(n - i - 1):
-                if nums[j] > nums[j + 1]:
-                    swapped = True
-                    nums[j], nums[j + 1] = nums[j + 1], nums[j]
-            if not swapped:
-                return
-            swapped = False
+def sortColors(nums: List[int]) -> None:
+    counter = Counter(nums)
+
+    i = 0
+    for j in range(3):
+        while counter[j]:
+            nums[i] = j
+            counter[j] -= 1
+            i += 1
+
+
+nums = [2, 1]
+
+sortColors(nums)
+print(nums)
