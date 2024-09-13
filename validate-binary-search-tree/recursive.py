@@ -1,4 +1,4 @@
-from typing import *
+from typing import Optional
 
 
 # Definition for a binary tree node.
@@ -12,13 +12,13 @@ class TreeNode:
 class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
 
-        def dfs(node: TreeNode, lb, ub):
-            if node == None:
+        def dfs(node: TreeNode, lb: int, ub: int):
+            if not node:
                 return True
             if not (lb < node.val and node.val < ub):
                 return False
 
-            return(dfs(node.left, lb, node.val) and
-                   dfs(node.right, node.val, ub))
+            return (dfs(node.left, lb, node.val) and
+                    dfs(node.right, node.val, ub))
 
         return dfs(root, float('-inf'), float('inf'))
