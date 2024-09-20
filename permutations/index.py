@@ -1,24 +1,22 @@
-class Solution(object):
-    def permute(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[List[int]]
-        """
-        res = []
-        seen = set()
+from typing import List
 
-        def dfs(cur):
-            if len(cur) == len(nums):
-                res.append([i for i in cur])
-                return
+
+class Solution:
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        def dfs(path: List[int]):
+            if len(path) == len(nums):
+                answer.append(path.copy())
 
             for num in nums:
                 if num in seen:
                     continue
                 seen.add(num)
-                cur.append(num)
-                dfs(cur)
-                cur.pop()
-                seen.remove(num)
+                path.append(num)
+                dfs(path)
+                path.pop()
+                seen.discard(num)
+
+        answer = []
+        seen = set()
         dfs([])
-        return res
+        return answer
