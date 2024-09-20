@@ -1,21 +1,16 @@
-from typing import *
+from typing import List
+from operator import itemgetter
 
 
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
-        """
-        :type intervals: List[List[int]]
-        :rtype: List[List[int]]
-        """
+        intervals.sort(key=itemgetter(0))
+        answer = [intervals[0]]
 
-        intervals.sort(key=lambda i: i[0])
-        result = [intervals[0]]
-
-        for start, end in intervals:
-            lastEnd = result[-1][1]
-            if start <= lastEnd:
-                result[-1][1] = max(lastEnd, end)
+        for i in range(1, len(intervals)):
+            if answer[-1][1] < intervals[i][0]:
+                answer.append(intervals[i])
             else:
-                result.append([start, end])
+                answer[-1][1] = max(answer[-1][1], intervals[i][1])
 
-        return result
+        return answer
