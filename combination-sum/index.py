@@ -1,24 +1,21 @@
-class Solution(object):
-    def combinationSum(self, candidates, target):
-        """
-        :type candidates: List[int]
-        :type target: int
-        :rtype: List[List[int]]
-        """
-        res = []
+from typing import List
 
-        def dfs(i, cur, total):
-            if total == target:
-                res.append([i for i in cur])
-                return
-            if i >= len(candidates) or total > target:
+
+class Solution:
+    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+        def dfs(current_target: int, path: List[int], start: int):
+            if current_target == 0:
+                answer.append(path.copy())
                 return
 
-            cur.append(candidates[i])
-            dfs(i, cur, total + candidates[i])
-            cur.pop()
-            dfs(i + 1, cur, total)
+            if current_target < 0:
+                return
 
-        dfs(0, [], 0)
+            for i in range(start, len(candidates)):
+                path.append(candidates[i])
+                dfs(current_target - candidates[i], path, i)
+                path.pop()
 
-        return res
+        answer = []
+        dfs(target, [], 0)
+        return answer
