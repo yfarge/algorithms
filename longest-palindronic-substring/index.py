@@ -1,22 +1,19 @@
-class Solution(object):
-    """
-    :type s: str
-    :rtype: str
-    """
+class Solution:
+    def longestPalindrome(self, s: str) -> str:
+        def expandFromCenter(left: int, right: int):
+            while left >= 0 and right < len(s) and s[left] == s[right]:
+                left -= 1
+                right += 1
 
-    def longestPalindrome(self, s):
-        res = ""
-        for i in range(len(s)):
-            odd_palindrone = self.expandFromCenter(i, i, s)
-            even_palindrone = self.expandFromCenter(i, i + 1, s)
-            if (len(odd_palindrone) > len(res)):
-                res = odd_palindrone
-            if (len(even_palindrone) > len(res)):
-                res = even_palindrone
-        return res
+            return s[left + 1: right]
 
-    def expandFromCenter(self, l, r, s):
-        while (l >= 0 and r < len(s) and s[l] == s[r]):
-            l -= 1
-            r += 1
-        return s[l + 1: r]
+        longest_palindrome = ""
+        for index in range(len(s)):
+            longest_palindrome = max(
+                longest_palindrome,
+                expandFromCenter(index, index),
+                expandFromCenter(index, index + 1),
+                key=len,
+            )
+
+        return longest_palindrome
