@@ -1,5 +1,5 @@
-from typing import Optional, List
 from collections import defaultdict, deque
+from typing import Optional, List
 
 
 # Definition for a binary tree node.
@@ -10,6 +10,24 @@ class TreeNode:
         self.right = right
 
 
+class Solution:
+    def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
+        def dfs(node: Optional[TreeNode], depth: int):
+            if not node:
+                return
+
+            if depth == len(answer):
+                answer.append(node.val)
+
+            dfs(node.right, depth + 1)
+            dfs(node.left, depth + 1)
+
+        answer = []
+        dfs(root, 0)
+        return answer
+
+
+# Iterative
 class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
         right_side = defaultdict(int)
