@@ -32,3 +32,28 @@ class Solution:
 
         left, right = result
         return s[left: right + 1] if result_length != float("inf") else ""
+
+
+# Brute Force
+class Solution:
+    def minWindow(self, s: str, t: str) -> str:
+        target, goal = defaultdict(int), defaultdict(int)
+        for c in t:
+            target[c] += 1
+
+        result = ""
+        left = 0
+        for right in range(len(s)):
+            goal[s[right]] += 1
+
+            while all(goal[k] >= target[k] for k in target.keys()):
+                if not result:
+                    result = s[left: right + 1]
+                else:
+                    result = min(result, s[left: right + 1], key=len)
+
+                if s[left] in target.keys():
+                    goal[s[left]] -= 1
+                left += 1
+
+        return result
