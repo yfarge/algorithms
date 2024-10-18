@@ -10,4 +10,5 @@
 | [drop-while](https://www.greatfrontend.com/questions/javascript/drop-while)                 | [TypeScript](./drop-while/index.ts)         |    Easy    |
 | [drop-while-right](https://www.greatfrontend.com/questions/javascript/drop-while-right)     | [TypeScript](./drop-while-right/index.ts)   |    Easy    |
 | [fill](https://www.greatfrontend.com/questions/javascript/fill)                             | [TypeScript](./fill/index.ts)               |    Easy    |
+| [find-index](https://www.greatfrontend.com/questions/javascript/find-index)                 | [TypeScript](./find-index/index.ts)         |    Easy    |
 | [sleep](https://www.greatfrontend.com/questions/javascript/sleep)                           | [TypeScript](./sleep/index.ts)              |    Easy    |
