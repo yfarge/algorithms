@@ -14,5 +14,6 @@
 | [find-index](https://www.greatfrontend.com/questions/javascript/find-index)                 | [TypeScript](./find-index/index.ts)         |    Easy    |
 | [function-apply](https://www.greatfrontend.com/questions/javascript/function-apply)         | [TypeScript](./function-apply/index.ts)     |    Easy    |
 | [in-range](https://www.greatfrontend.com/questions/javascript/in-range)                     | [TypeScript](./in-range/index.ts)           |    Easy    |
+| [intersection](https://www.greatfrontend.com/questions/javascript/intersection)             | [TypeScript](./intersection/index.ts)       |    Easy    |
 | [get](https://www.greatfrontend.com/questions/javascript/get)                               | [TypeScript](./get/index.ts)                |    Easy    |
 | [sleep](https://www.greatfrontend.com/questions/javascript/sleep)                           | [TypeScript](./sleep/index.ts)              |    Easy    |
