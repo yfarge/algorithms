@@ -16,4 +16,5 @@
 | [in-range](https://www.greatfrontend.com/questions/javascript/in-range)                     | [TypeScript](./in-range/index.ts)           |    Easy    |
 | [intersection](https://www.greatfrontend.com/questions/javascript/intersection)             | [TypeScript](./intersection/index.ts)       |    Easy    |
 | [get](https://www.greatfrontend.com/questions/javascript/get)                               | [TypeScript](./get/index.ts)                |    Easy    |
+| [max-by](https://www.greatfrontend.com/questions/javascript/max-by)                         | [TypeScript](./max-by/index.ts)             |    Easy    |
 | [sleep](https://www.greatfrontend.com/questions/javascript/sleep)                           | [TypeScript](./sleep/index.ts)              |    Easy    |
