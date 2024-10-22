@@ -19,4 +19,5 @@
 | [max-by](https://www.greatfrontend.com/questions/javascript/max-by)                         | [TypeScript](./max-by/index.ts)             |    Easy    |
 | [object-map](https://www.greatfrontend.com/questions/javascript/object-map)                 | [TypeScript](./object-map/index.ts)         |    Easy    |
 | [once](https://www.greatfrontend.com/questions/javascript/once)                             | [TypeScript](./once/index.ts)               |    Easy    |
+| [promise-reject](https://www.greatfrontend.com/questions/javascript/promise-reject)         | [TypeScript](./promise-reject/index.ts)     |    Easy    |
 | [sleep](https://www.greatfrontend.com/questions/javascript/sleep)                           | [TypeScript](./sleep/index.ts)              |    Easy    |
