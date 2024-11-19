@@ -3,18 +3,21 @@ from typing import List
 
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
-        def dfs(path: List[str], stack: List[str]):
-            if len(path) == 2 * n:
-                if not stack:
-                    result.append("".join(path))
+        def backtrack(o: int, c: int):
+            if o == c == n:
+                result.append("".join(path))
                 return
 
-            dfs(path + ["("], stack + [")"])
+            if o < n:
+                path.append('(')
+                backtrack(o + 1, c)
+                path.pop()
 
-            if stack and stack[-1] == ")":
-                stack.pop()
-                dfs(path + [")"], stack)
+            if c < o:
+                path.append(')')
+                backtrack(o, c + 1)
+                path.pop()
 
-        result = []
-        dfs([], [])
+        result, path = [], []
+        backtrack(0, 0)
         return result
