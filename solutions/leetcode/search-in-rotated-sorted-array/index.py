@@ -3,29 +3,22 @@ from typing import List
 
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
-        left, right = 0, len(nums) - 1
-        while left <= right:
-            mid = (left + right) // 2
+        low, high = 0, len(nums) - 1
 
-            if nums[mid] > nums[-1]:
-                left = mid + 1
-            else:
-                right = mid - 1
+        while low <= high:
+            mid = low + (high - low) // 2
+            if target == nums[mid]:
+                return mid
 
-        def binary_search(low: int, high: int):
-            while low <= high:
-                mid = (low + high) // 2
-
-                if nums[mid] < target:
+            if nums[low] <= nums[mid]:
+                if target > nums[mid] or target < nums[low]:
                     low = mid + 1
-                elif nums[mid] > target:
+                else:
+                    high = mid - 1
+
+            else:
+                if target < nums[mid] or target > nums[high]:
                     high = mid - 1
                 else:
-                    return mid
-            return -1
-
-        answer = binary_search(0, left)
-        if answer != -1:
-            return answer
-
-        return binary_search(left, len(nums) - 1)
+                    low = mid + 1
+        return -1
