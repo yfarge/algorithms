@@ -1,42 +1,31 @@
-from queue import PriorityQueue
-
-
-# Wrapper to add less than operator to ListNode class
-class Wrapper():
-    def __init__(self, node):
-        self.node = node
-
-    def __lt__(self, other):
-        return self.node.val < other.node.val
+from typing import List, Optional
 
 
 # Definition for singly-linked list.
-class ListNode(object):
+class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
 
 
-# Solution
-class Solution(object):
-    """
-    :type lists: List[ListNode]
-    :rtype: ListNode
-    """
+class Solution:
+    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+        if not lists:
+            return None
 
-    def mergeKLists(self, lists: list[ListNode]):
-        cur = dummy = ListNode()
-        q = PriorityQueue()
+        l1 = lists[0]
+        for i in range(1, len(lists)):
+            tail = dummy = ListNode()
+            l2 = lists[i]
+            while l1 and l2:
+                if l1.val <= l2.val:
+                    tail.next = l1
+                    l1 = l1.next
+                else:
+                    tail.next = l2
+                    l2 = l2.next
+                tail = tail.next
+            tail.next = l1 if l1 else l2
+            l1 = dummy.next
 
-        for l in [l for l in lists if l is not None]:
-            q.put(Wrapper(l))
-
-        while not q.empty():
-            l = q.get().node
-            cur.next = l
-            cur = cur.next
-            l = l.next
-            if l:
-                q.put(Wrapper(l))
-
-        return dummy.next
+        return l1
