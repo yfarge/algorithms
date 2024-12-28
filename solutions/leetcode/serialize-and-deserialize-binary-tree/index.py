@@ -1,3 +1,6 @@
+from collections import deque
+
+
 # Definition for a binary tree node.
 class TreeNode(object):
     def __init__(self, x):
@@ -14,14 +17,23 @@ class Codec:
         :type root: TreeNode
         :rtype: str
         """
+        if not root:
+            return ""
 
-        def preorder(node):
+        result = []
+
+        queue = deque([root])
+        while queue:
+            node = queue.popleft()
             if not node:
-                return [None]
+                result.append('#')
+                continue
+            result.append(str(node.val))
 
-            return [node.val] + preorder(node.left) + preorder(node.right)
+            queue.append(node.left)
+            queue.append(node.right)
 
-        return str(preorder(root))
+        return ",".join(result)
 
     def deserialize(self, data):
         """Decodes your encoded data to tree.
@@ -29,25 +41,27 @@ class Codec:
         :type data: str
         :rtype: TreeNode
         """
-        preorder = eval(data)
-        index = 0
+        if not data:
+            return None
 
-        def create_binary_tree():
-            nonlocal index
-            if preorder[index] is None:
-                return None
+        data = data.split(',')
+        root = TreeNode(int(data[0]))
+        i = 1
+        queue = deque([root])
+        while queue and i < len(data):
+            node = queue.popleft()
 
-            node = TreeNode(preorder[index])
+            if data[i] != '#':
+                node.left = TreeNode(int(data[i]))
+                queue.append(node.left)
+            i += 1
 
-            index += 1
-            node.left = create_binary_tree()
+            if i < len(data) and data[i] != '#':
+                node.right = TreeNode(int(data[i]))
+                queue.append(node.right)
+            i += 1
 
-            index += 1
-            node.right = create_binary_tree()
-
-            return node
-
-        return create_binary_tree()
+        return root
 
 
 # Your Codec object will be instantiated and called as such:
