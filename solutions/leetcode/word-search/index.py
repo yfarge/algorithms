@@ -3,31 +3,32 @@ from typing import List
 
 class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
-        def backtrack(row: int, col: int, i: int):
-            if i == len(word):
+        m, n = len(board), len(board[0])
+
+        def backtrack(row: int, col: int, wordIndex: int):
+            if wordIndex == len(word):
                 return True
 
-            if not (0 <= row < m and 0 <= col < n and board[row][col] == word[i]):
+            if (
+                row < 0
+                or m <= row
+                or col < 0
+                or n <= col
+                or board[row][col] != word[wordIndex]
+            ):
                 return False
 
             board[row][col] = "#"
-            for next_row, next_col in [
-                (row - 1, col),
-                (row, col + 1),
-                (row + 1, col),
-                (row, col - 1),
-            ]:
-                if backtrack(next_row, next_col, i + 1):
-                    return True
 
-            board[row][col] = word[i]
-            return False
+            result = (
+                backtrack(row, col - 1, wordIndex + 1)
+                or backtrack(row - 1, col, wordIndex + 1)
+                or backtrack(row, col + 1, wordIndex + 1)
+                or backtrack(row + 1, col, wordIndex + 1)
+            )
 
-        m, n = len(board), len(board[0])
-        for row in range(m):
-            for col in range(n):
-                if backtrack(row, col, 0):
-                    return True
+            board[row][col] = word[wordIndex]
 
-        return False
+            return result
 
+        return any(backtrack(i, j, 0) for i in range(m) for j in range(n))
