@@ -29,3 +29,20 @@ class Solution:
             return rightTail or leftTail or node
 
         dfs(root)
+
+
+class Solution:
+    def flatten(self, root: Optional[TreeNode]) -> None:
+        """
+        Do not return anything, modify root in-place instead.
+        """
+        def preorder(node: Optional[TreeNode]):
+            if not node:
+                return []
+
+            return [node] + preorder(node.left) + preorder(node.right)
+
+        nodes = preorder(root)
+        for i in range(1, len(nodes)):
+            nodes[i - 1].left = None
+            nodes[i - 1].right = nodes[i]
