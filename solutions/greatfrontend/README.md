@@ -5,6 +5,7 @@
 | [array-balanced-brackets](https://www.greatfrontend.com/questions/javascript/array-balanced-brackets)                             | [TypeScript](./array-balanced-brackets/index.ts)               |    Easy    |
 | [array-find-duplicate](https://www.greatfrontend.com/questions/javascript/array-find-duplicate)                                   | [TypeScript](./array-find-duplicate/index.ts)                  |    Easy    |
 | [array-find-missing-number-in-sequence](https://www.greatfrontend.com/questions/javascript/array-find-missing-number-in-sequence) | [TypeScript](./array-find-missing-number-in-sequence/index.ts) |    Easy    |
+| [array-most-common-elements](https://www.greatfrontend.com/interviews/study/blind75/questions/algo/array-most-common-elements)    | [TypeScript](./array-most-common-elements/index.ts)            |    Easy    |
 | [chunk](https://www.greatfrontend.com/questions/javascript/chunk)                                                                 | [TypeScript](./chunk/index.ts)                                 |    Easy    |
 | [clamp](https://www.greatfrontend.com/questions/javascript/clamp)                                                                 | [TypeScript](./clamp/index.ts)                                 |    Easy    |
 | [compact](https://www.greatfrontend.com/questions/javascript/compact)                                                             | [TypeScript](./compact/index.ts)                               |    Easy    |
