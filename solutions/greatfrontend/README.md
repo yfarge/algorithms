@@ -6,6 +6,7 @@
 | [array-find-duplicate](https://www.greatfrontend.com/questions/javascript/array-find-duplicate)                                          | [TypeScript](./array-find-duplicate/index.ts)                  |    Easy    |
 | [array-find-missing-number-in-sequence](https://www.greatfrontend.com/questions/javascript/array-find-missing-number-in-sequence)        | [TypeScript](./array-find-missing-number-in-sequence/index.ts) |    Easy    |
 | [array-product-excluding-current](https://www.greatfrontend.com/interviews/study/blind75/questions/algo/array-product-excluding-current) | [TypeScript](./array-product-excluding-current/index.ts)       |    Easy    |
+| [array-maximum-sum-contiguous](https://www.greatfrontend.com/interviews/study/blind75/questions/algo/array-maximum-sum-contiguous)       | [TypeScript](./array-maximum-sum-contiguous/index.ts)          |    Easy    |
 | [array-most-common-elements](https://www.greatfrontend.com/interviews/study/blind75/questions/algo/array-most-common-elements)           | [TypeScript](./array-most-common-elements/index.ts)            |    Easy    |
 | [array-reachable-end](https://www.greatfrontend.com/interviews/study/blind75/questions/algo/array-reachable-end)                         | [TypeScript](./array-reachable-end/index.ts)                   |    Easy    |
 | [chunk](https://www.greatfrontend.com/questions/javascript/chunk)                                                                        | [TypeScript](./chunk/index.ts)                                 |    Easy    |
