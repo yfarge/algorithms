@@ -9,6 +9,7 @@
 | [array-maximum-sum-contiguous](https://www.greatfrontend.com/interviews/study/blind75/questions/algo/array-maximum-sum-contiguous)       | [TypeScript](./array-maximum-sum-contiguous/index.ts)          |    Easy    |
 | [array-most-common-elements](https://www.greatfrontend.com/interviews/study/blind75/questions/algo/array-most-common-elements)           | [TypeScript](./array-most-common-elements/index.ts)            |    Easy    |
 | [array-reachable-end](https://www.greatfrontend.com/interviews/study/blind75/questions/algo/array-reachable-end)                         | [TypeScript](./array-reachable-end/index.ts)                   |    Easy    |
+| [array-rotated-find](https://www.greatfrontend.com/interviews/study/blind75/questions/algo/array-rotated-find)                           | [TypeScript](./array-rotated-find/index.ts)                    |    Easy    |
 | [chunk](https://www.greatfrontend.com/questions/javascript/chunk)                                                                        | [TypeScript](./chunk/index.ts)                                 |    Easy    |
 | [clamp](https://www.greatfrontend.com/questions/javascript/clamp)                                                                        | [TypeScript](./clamp/index.ts)                                 |    Easy    |
 | [compact](https://www.greatfrontend.com/questions/javascript/compact)                                                                    | [TypeScript](./compact/index.ts)                               |    Easy    |
