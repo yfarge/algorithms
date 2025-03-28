@@ -11,6 +11,7 @@
 | [array-reachable-end](https://www.greatfrontend.com/interviews/study/blind75/questions/algo/array-reachable-end)                         | [TypeScript](./array-reachable-end/index.ts)                   |    Easy    |
 | [array-rotated-find](https://www.greatfrontend.com/interviews/study/blind75/questions/algo/array-rotated-find)                           | [TypeScript](./array-rotated-find/index.ts)                    |    Easy    |
 | [array-smallest-in-rotated](https://www.greatfrontend.com/interviews/study/blind75/questions/algo/array-smallest-in-rotated)             | [TypeScript](./array-smallest-in-rotated/index.ts)             |    Easy    |
+| [binary-search-tree-kth-smallest](https://www.greatfrontend.com/interviews/study/blind75/questions/algo/binary-search-tree-kth-smallest) | [TypeScript](./binary-search-tree-kth-smallest/index.ts)       |   Medium   |
 | [chunk](https://www.greatfrontend.com/questions/javascript/chunk)                                                                        | [TypeScript](./chunk/index.ts)                                 |    Easy    |
 | [clamp](https://www.greatfrontend.com/questions/javascript/clamp)                                                                        | [TypeScript](./clamp/index.ts)                                 |    Easy    |
 | [compact](https://www.greatfrontend.com/questions/javascript/compact)                                                                    | [TypeScript](./compact/index.ts)                               |    Easy    |
