@@ -1,29 +1,33 @@
 interface TreeNode {
-  val: number;
-  left: TreeNode | null;
-  right: TreeNode | null;
+    val: number;
+    left: TreeNode | null;
+    right: TreeNode | null;
 }
 
 export default function binaryTreeLevelOrderTraversal(
-  root: TreeNode | null,
+    root: TreeNode | null,
 ): number[][] {
-  const result: number[][] = [];
-  function dfs(node: TreeNode | null, depth: number) {
-    if (node == null) {
-      return
+    if (root == null) {
+        return [];
     }
 
-    if (result.length == depth) {
-      result.push(Array());
+    const result: number[][] = [];
+    const stack: [TreeNode | null, number][] = [[root, 0]];
+    while (stack.length > 0) {
+        const [node, depth] = stack.pop() || [];
+        if (node == null || depth == null) {
+            continue;
+        }
+
+        if (result.length == depth) {
+            result.push([])
+        }
+
+        stack.push([node.right, depth + 1])
+        stack.push([node.left, depth + 1])
+
+        result[depth].push(node.val)
     }
 
-    dfs(node.left, depth + 1)
-    dfs(node.right, depth + 1)
-
-    result[depth].push(node.val);
-  }
-
-  dfs(root, 0);
-
-  return result;
+    return result;
 }
