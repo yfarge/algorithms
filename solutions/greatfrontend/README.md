@@ -18,12 +18,10 @@
 | [binary-tree-flip](https://www.greatfrontend.com/interviews/study/blind75/questions/algo/binary-tree-flip)                                                   | [TypeScript](./binary-tree-flip/index.ts)                          |    Easy    |
 | [binary-tree-level-order-traversal](https://www.greatfrontend.com/interviews/study/blind75/questions/algo/binary-tree-level-order-traversal)                 | [TypeScript](./binary-tree-level-order-traversal/index.ts)         |   Medium   |
 | [binary-tree-maximum-depth](https://www.greatfrontend.com/interviews/study/blind75/questions/algo/binary-tree-maximum-depth)                                 | [TypeScript](./binary-tree-maximum-depth/index.ts)                 |   Medium   |
-<<<<<<< Updated upstream
+| [binary-tree-rebuilding-from-traversals](https://www.greatfrontend.com/interviews/study/blind75/questions/algo/binary-tree-rebuilding-from-traversals)       | [TypeScript](./binary-tree-rebuilding-from-traversals/index.ts)    |   Medium   |
 | [bit-counting](https://www.greatfrontend.com/interviews/study/blind75/questions/algo/bit-counting)                                                           | [TypeScript](./bit-counting/index.ts)                              |   Medium   |
 | [course-dependency](https://www.greatfrontend.com/interviews/study/blind75/questions/algo/course-dependency)                                                 | [TypeScript](./course-dependency/index.ts)                         |   Medium   |
-=======
 | [binary-tree-maximum-total-path](https://www.greatfrontend.com/interviews/study/blind75/questions/algo/binary-tree-maximum-total-path)                       | [TypeScript](./binary-tree-maximum-total-path/index.ts)            |   Medium   |
->>>>>>> Stashed changes
 | [chunk](https://www.greatfrontend.com/questions/javascript/chunk)                                                                                            | [TypeScript](./chunk/index.ts)                                     |    Easy    |
 | [clamp](https://www.greatfrontend.com/questions/javascript/clamp)                                                                                            | [TypeScript](./clamp/index.ts)                                     |    Easy    |
 | [compact](https://www.greatfrontend.com/questions/javascript/compact)                                                                                        | [TypeScript](./compact/index.ts)                                   |    Easy    |
