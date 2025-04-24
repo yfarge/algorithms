@@ -64,3 +64,4 @@
 | [pair-sum](https://www.greatfrontend.com/questions/javascript/pair-sum)                                                                                      | [TypeScript](./pair-sum/index.ts)                                  |    Easy    |
 | [promise-reject](https://www.greatfrontend.com/questions/javascript/promise-reject)                                                                          | [TypeScript](./promise-reject/index.ts)                            |    Easy    |
 | [sleep](https://www.greatfrontend.com/questions/javascript/sleep)                                                                                            | [TypeScript](./sleep/index.ts)                                     |    Easy    |
+| [staircase-climbing-combinations](https://www.greatfrontend.com/questions/javascript/staircase-climbing-combinations)                                        | [TypeScript](./staircase-climbing-combinations/index.ts)           |    Easy    |
