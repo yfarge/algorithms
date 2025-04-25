@@ -65,3 +65,4 @@
 | [promise-reject](https://www.greatfrontend.com/questions/javascript/promise-reject)                                                                          | [TypeScript](./promise-reject/index.ts)                            |    Easy    |
 | [sleep](https://www.greatfrontend.com/questions/javascript/sleep)                                                                                            | [TypeScript](./sleep/index.ts)                                     |    Easy    |
 | [staircase-climbing-combinations](https://www.greatfrontend.com/questions/javascript/staircase-climbing-combinations)                                        | [TypeScript](./staircase-climbing-combinations/index.ts)           |    Easy    |
+| [string-anagram](https://www.greatfrontend.com/questions/javascript/string-anagram)                                                                          | [TypeScript](./string-anagram/index.ts)                            |    Easy    |
