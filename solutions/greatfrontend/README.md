@@ -66,3 +66,4 @@
 | [sleep](https://www.greatfrontend.com/questions/javascript/sleep)                                                                                            | [TypeScript](./sleep/index.ts)                                     |    Easy    |
 | [staircase-climbing-combinations](https://www.greatfrontend.com/questions/javascript/staircase-climbing-combinations)                                        | [TypeScript](./staircase-climbing-combinations/index.ts)           |    Easy    |
 | [string-anagram](https://www.greatfrontend.com/questions/javascript/string-anagram)                                                                          | [TypeScript](./string-anagram/index.ts)                            |    Easy    |
+| [string-anagram-groups](https://www.greatfrontend.com/questions/javascript/string-anagram-groups)                                                            | [TypeScript](./string-anagram-groups/index.ts)                     |   Medium   |
