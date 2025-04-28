@@ -3,12 +3,12 @@ export default function isStringPalindrome(str: string): boolean {
   let right = str.length - 1;
 
   while (left < right) {
-    if (!isAlnum(str[left])) {
+    if (!isAlnum(str[left].toLowerCase())) {
       left++;
       continue;
     }
 
-    if (!isAlnum(str[right])) {
+    if (!isAlnum(str[right].toLowerCase())) {
       right--;
       continue;
     }
